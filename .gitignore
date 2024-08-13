@@ -1,0 +1,27 @@
+# VSCode configuration files
+.vscode/
+
+# JetBrains IDEs (e.g., PyCharm)
+.idea/
+
+# Python compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+
+# Python egg and wheel files
+*.egg
+*.egg-info/
+*.eggs/
+*.whl
+
+# Pytest cache
+.pytest_cache/
+
+# ALX *-main.* task test files
+*-main.*
