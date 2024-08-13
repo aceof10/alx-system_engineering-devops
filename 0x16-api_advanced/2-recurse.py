@@ -12,7 +12,7 @@ def recurse(subreddit, hot_list=[], after=None):
     for a given subreddit
     """
     url = f"https://www.reddit.com/r/{subreddit}/hot.json"
-    headers = {'User-Agent': 'Chrome/0.1'}
+    headers = {'User-Agent': 'Mozilla/5.0'}
     params = {'limit': 100, 'after': after}
 
     try:

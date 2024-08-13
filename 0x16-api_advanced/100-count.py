@@ -14,7 +14,7 @@ def count_words(subreddit, word_list, hot_list=[], after=None):
     counts and prints sorted keyword occurrences
     """
     url = f"https://www.reddit.com/r/{subreddit}/hot.json"
-    headers = {'User-Agent': 'custom_user_agent/0.1'}
+    headers = {'User-Agent': 'Mozilla/5.0'}
     params = {'limit': 100, 'after': after}
 
     try:
