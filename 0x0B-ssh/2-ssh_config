@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# SSH client configuration using private key ~/.ssh/school, no password auth
+
+Host 326136-web-01
+HostName 100.25.141.247
+User ubuntu
+IdentityFile ~/.ssh/school
+PasswordAuthentication no
