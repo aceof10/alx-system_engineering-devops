@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# install nginx web server on web-01
+
+# update package list and installing Nginx
+echo "Updating package list and installing Nginx..."
+sudo apt-get update -y
+sudo apt-get install nginx -y
+
+# allow HTTP traffic through UFW firewall
+echo "Allowing HTTP traffic through UFW firewall..."
+sudo ufw allow "Nginx HTTP"
+
+# set ownership and permission for web directories
+echo "Setting ownership and permission for /var//www/html..."
+sudo chown -R $USER:$USER /var/www/html
+sudo chmod -R 755 /var/www
+
+# create a sample index.nginx-debian.html file
+echo "Creating a sample index.nginx-debian.html file..."
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+
+# start Nginx service
+echo "Starting Nginx service..."
+sudo service nginx start
+
+echo -e "\nNginx installation and setup completed successfully!\n"
