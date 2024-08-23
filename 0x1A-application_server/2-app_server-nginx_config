@@ -1,0 +1,20 @@
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+	server_name 100.26.121.95;
+        add_header X-Served-By 326136-web-01;
+        root /var/www/html;
+        index index.html;
+        location /redirect_me {
+                return 301 https://github.com/aceof10;
+        }
+
+	location = /airbnb-onepage/ {
+        	proxy_pass http://127.0.0.1:5000/airbnb-onepage/;
+    	}
+
+        error_page 404 /404.html;
+        location = /404.html{
+        	internal;
+        }
+}
